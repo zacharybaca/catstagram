@@ -185,7 +185,11 @@ window.onload = (event) => {
             commentContainer.removeChild(commentContainer.firstChild);
         }
 
-        // Reset upVote and downVote counter
+        // Remove down votes and up votes from local storage
+        localStorage.removeItem("downVote");
+        localStorage.removeItem("upVote");
+
+        // Reset upVote and downVote counter innerHTML text
         timesClickedUp = 0;
         timesClickedDown = 0;
 
